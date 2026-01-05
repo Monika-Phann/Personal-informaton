@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONIKA PHANN - Resume</title>
+    <title>MONIKA PHANN - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         @page {
@@ -13,7 +13,7 @@
             margin: 0;
         }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: #525659;
             display: flex;
             justify-content: center;
@@ -29,21 +29,29 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
             overflow: hidden;
         }
-        /* Custom scrollbar for skills if needed, though we fit to page */
-        ::-webkit-scrollbar { width: 0px; }
 
-        /* Timeline Dot */
+        /* Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #374151; /* Dark Gray Line */
+            margin-bottom: 20px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            border-left: 2px solid transparent; /* Hide line after last dot */
+        }
         .timeline-dot {
+            position: absolute;
+            left: -7px;
+            top: 0;
             width: 12px;
             height: 12px;
-            background-color: #374151; /* Dark Grey */
+            background-color: #374151;
             border-radius: 50%;
-            position: absolute;
-            left: -6.5px;
-            top: 5px;
-            border: 2px solid white;
         }
-        
+
+        /* Print Settings */
         @media print {
             body { background: white; padding: 0; }
             .resume-page { box-shadow: none; height: 297mm; }
@@ -56,149 +64,153 @@
 
     <div class="fixed top-5 right-5 no-print">
         <button onclick="window.print()" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded shadow-lg flex items-center gap-2 transition-all">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             Save as PDF
         </button>
     </div>
 
     <div class="resume-page">
         
-        <aside class="w-[33%] bg-[#40444b] text-white p-8 flex flex-col gap-6 h-full shrink-0">
+        <aside class="w-[32%] bg-[#323b4c] text-white p-8 flex flex-col gap-8 h-full shrink-0">
             
             <div class="flex justify-center mb-2">
-                <div class="w-36 h-36 rounded-full border-[4px] border-white overflow-hidden shadow-lg">
+                <div class="w-32 h-32 rounded-full border-4 border-gray-400 overflow-hidden shadow-xl">
                     <img src="./src/profile.jpg" alt="Profile" class="w-full h-full object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/5c5c5c/FFFFFF?text=PHOTO';">
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/4B5563/FFFFFF?text=PHOTO';">
                 </div>
             </div>
 
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Contact</h3>
-                <div class="space-y-3 text-[12px] font-light text-gray-100">
+            <div>
+                <h3 class="text-lg font-bold uppercase border-b border-gray-500 pb-2 mb-4 tracking-wider">Contact</h3>
+                <div class="space-y-4 text-[11px] font-light tracking-wide text-gray-200">
                     <div class="flex items-center gap-3">
-                        <span class="text-lg">📞</span>
-                        <a href="tel:+85570372794" class="hover:text-gray-300 transition-colors">+855 703 727 94</a>
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a1 1 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.088-1.391l-4.064-3.696z"/></svg>
+                        <a href="tel:+85570372794" class="hover:text-white">+855 703 727 94</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="text-lg">✉️</span>
-                        <a href="mailto:nika00tgi@gmail.com" class="hover:text-gray-300 transition-colors break-all">nika00tgi@gmail.com</a>
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"/></svg>
+                        <a href="mailto:nika00tgi@gmail.com" class="hover:text-white break-all">nika00tgi@gmail.com</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="text-lg">📍</span>
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
                         <span>Phnom Penh, Cambodia</span>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <span class="text-lg mt-[-2px]">🐙</span>
-                        <a href="https://github.com/Monika-Phann" class="hover:text-gray-300 transition-colors">Monika-Phann</a>
+                    <div class="flex items-center gap-3">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        <a href="https://github.com/Monika-Phann" class="hover:text-white">Monika-Phann</a>
                     </div>
                 </div>
             </div>
 
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Skills</h3>
-                <ul class="space-y-2.5 text-[12px] font-light text-gray-100 list-disc list-outside ml-4">
+            <div>
+                <h3 class="text-lg font-bold uppercase border-b border-gray-500 pb-2 mb-4 tracking-wider">Skills</h3>
+                <ul class="space-y-2.5 text-[11px] font-light text-gray-200 list-disc list-outside ml-4">
                     <li>Problem-solving & Debugging</li>
-                    <li>Team Collaboration (Agile/Scrum)</li>
+                    <li>Agile & Scrum Methodologies</li>
                     <li>Time Management & Organization</li>
-                    <li>Git Workflows & Code Review</li>
-                    <li>System Admin (Linux/Nginx)</li>
                     <li>Effective Communication</li>
+                    <li>Full-Stack(JS)</li>
+                    <li>UI/UX Design</li>
+                    <li>Git Workflows</li>
+                    <li>System Admin (basic Linux, pm2, cloudflared)</li>
                 </ul>
             </div>
 
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Languages</h3>
-                <div class="space-y-2 text-[12px] font-light text-gray-100">
+            <div>
+                <h3 class="text-lg font-bold uppercase border-b border-gray-500 pb-2 mb-4 tracking-wider">Languages</h3>
+                <div class="space-y-2 text-[11px] font-light text-gray-200">
                     <div class="flex justify-between">
                         <span>Khmer</span>
-                        <span class="opacity-75">Native</span>
+                        <span class="opacity-70">Native</span>
                     </div>
                     <div class="flex justify-between">
                         <span>English</span>
-                        <span class="opacity-75">Upper Intermediate</span>
+                        <span class="opacity-70">Upper Intermediate</span>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-auto pt-4 space-y-1">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2 mb-3">Referees</h3>
-                <p class="font-bold text-sm text-white">Thong Soriaphorn</p>
-                <p class="text-[12px] text-gray-300">Operations Manager</p>
-                <p class="text-[12px] text-gray-300">ANB School</p>
-                <p class="text-[12px] text-gray-200 mt-1">📞 016 520 456</p>
-                <p class="text-[11px] text-gray-300 break-all">soriaphorn.thong@anbschool.org</p>
+            <div class="mt-auto pt-4">
+                <h3 class="text-lg font-bold uppercase border-b border-gray-500 pb-2 mb-4 tracking-wider">Referees</h3>
+                <div class="text-[11px] text-gray-300 space-y-0.5">
+                    <p class="font-bold text-white text-sm mb-1">Thong Soriaphorn</p>
+                    <p>Operations Manager</p>
+                    <p class="italic text-gray-400">ANB School</p>
+                    <p class="mt-1">📞 016 520 456</p>
+                    <p class="break-all">✉️ soriaphorn.thong@anbschool.org</p>
+                </div>
             </div>
         </aside>
 
-        <main class="w-[67%] p-10 flex flex-col h-full text-gray-800">
+        <main class="w-[68%] p-10 flex flex-col h-full text-gray-800">
             
-            <header class="mb-6 border-b-2 border-gray-800 pb-6">
-                <h1 class="text-[44px] font-black text-gray-900 tracking-wide uppercase leading-none">MONIKA <span class="font-light">PHANN</span></h1>
-                <p class="text-lg text-gray-600 tracking-[0.3em] font-medium uppercase mt-2">FULL STACK DEVELOPER</p>
+            <header class="mb-8">
+                <h1 class="text-5xl font-black text-gray-900 tracking-wide uppercase leading-none mb-2">MONIKA PHANN</h1>
+                <p class="text-lg text-gray-600 tracking-[0.2em] font-medium uppercase">FULL STACK DEVELOPER</p>
             </header>
 
-            <section class="mb-6">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-xl text-gray-800">👤</span>
-                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">PROFILE</h2>
-                </div>
-                <p class="text-[11px] leading-relaxed text-justify text-gray-600 font-normal">
+            <section class="mb-8">
+                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-900 pb-1 mb-3 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    PROFILE
+                </h2>
+                <p class="text-[11px] leading-relaxed text-justify text-gray-600">
                     I am a student at <strong class="text-gray-900">Above and Beyond</strong> with a strong focus on <strong class="text-gray-900">Full-Stack Web Development</strong> and <strong class="text-gray-900">System Administration</strong>. Unlike typical students who focus only on writing code, I bridge the gap between development and operations. I build dynamic applications using <strong class="text-gray-900">React, Node.js, and PostgreSQL</strong>, and I personally handle their deployment on <strong class="text-gray-900">Linux (Ubuntu) VPS</strong> environments. I am a proactive problem-solver eager to apply my technical depth as an <strong class="text-gray-900">Intern</strong> or <strong class="text-gray-900">Junior Developer</strong>.
                 </p>
             </section>
 
-            <section class="mb-6">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-xl text-gray-800">⚙️</span>
-                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">TECHNICAL SKILLS</h2>
-                </div>
-                <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-[11px] text-gray-600">
+            <section class="mb-8">
+                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-900 pb-1 mb-3 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.488.488 0 0 0-.59.22L2.09 8.87a.484.484 0 0 0 .12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.48.48 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    TECHNICAL SKILLS
+                </h2>
+                <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-[11px] text-gray-600">
                     <div>
-                        <strong class="text-gray-900 block mb-0.5">Front-End</strong>
+                        <strong class="text-gray-900 block mb-1">Front-End</strong>
                         React.js, Tailwind CSS, HTML5, CSS3, JavaScript (ES6+), Responsive Design.
                     </div>
                     <div>
-                        <strong class="text-gray-900 block mb-0.5">Back-End</strong>
+                        <strong class="text-gray-900 block mb-1">Back-End</strong>
                         Node.js, Express.js, RESTful API Architecture, Authentication (JWT/SSO).
                     </div>
-                    <div class="mt-1">
-                        <strong class="text-gray-900 block mb-0.5">DevOps & SysAdmin</strong>
+                    <div>
+                        <strong class="text-gray-900 block mb-1">DevOps & SysAdmin</strong>
                         Linux (Ubuntu), Nginx (Proxy), PM2, SSH Tunneling, Cloudflare, VPS.
                     </div>
-                    <div class="mt-1">
-                        <strong class="text-gray-900 block mb-0.5">Database & Tools</strong>
+                    <div>
+                        <strong class="text-gray-900 block mb-1">Database & Tools</strong>
                         PostgreSQL, MongoDB, Git, GitHub, Postman, VS Code, Figma.
                     </div>
                 </div>
             </section>
 
-            <section class="mb-6">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="text-xl text-gray-800">🎓</span>
-                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">EDUCATION</h2>
-                </div>
+            <section class="mb-8">
+                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-900 pb-1 mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                    EDUCATIONS
+                </h2>
                 
-                <div class="border-l-2 border-gray-300 ml-2 space-y-6">
-                    <div class="relative pl-6">
+                <div class="ml-2">
+                    <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="flex justify-between items-baseline">
+                        <div class="flex justify-between items-baseline mb-1">
                             <h3 class="text-xs font-bold text-gray-900 uppercase">Certificate in Backend Engineering</h3>
                             <span class="text-[10px] font-bold text-gray-500">2025</span>
                         </div>
                         <p class="text-[10px] italic text-gray-600 mb-1">Above and Beyond School</p>
-                        <p class="text-[10px] text-gray-600 leading-tight">
+                        <p class="text-[10px] text-gray-600 leading-relaxed">
                             Completed an intensive 3-month full-time software development program focused on backend architecture. Gained practical experience in corporate-standard development workflows, API design, and system deployment.
                         </p>
                     </div>
 
-                    <div class="relative pl-6">
+                    <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="flex justify-between items-baseline">
+                        <div class="flex justify-between items-baseline mb-1">
                             <h3 class="text-xs font-bold text-gray-900 uppercase">Bachelor of Information Technology</h3>
                             <span class="text-[10px] font-bold text-gray-500">2024</span>
                         </div>
                         <p class="text-[10px] italic text-gray-600 mb-1">Institute of Science and Technology (ISTAD)</p>
-                        <p class="text-[10px] text-gray-600 leading-tight">
+                        <p class="text-[10px] text-gray-600 leading-relaxed">
                             Completed Year 1 fundamental coursework with a specialized focus on Frontend technologies. Temporarily paused degree completion to pursue an intensive, practical software engineering capstone at Above and Beyond.
                         </p>
                     </div>
@@ -206,30 +218,34 @@
             </section>
 
             <section>
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="text-xl text-gray-800">💻</span>
-                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">SCHOOL PROJECT</h2>
-                </div>
+                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-900 pb-1 mb-3 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                    SCHOOL PROJECT
+                </h2>
                 <div class="space-y-3">
-                    <div class="bg-gray-50 p-3 rounded border border-gray-100">
-                        <div class="flex justify-between items-center mb-1">
+                    <div class="group">
+                        <div class="flex justify-between items-center mb-0.5">
                             <h3 class="text-xs font-bold text-gray-900 uppercase">CareerSync Platform</h3>
-                            <a href="https://careersync-4be.ptascloud.online/" class="text-[10px] font-bold text-blue-700 hover:underline">VIEW LIVE ↗</a>
+                            <a href="https://careersync-4be.ptascloud.online/" class="text-[10px] text-blue-700 hover:underline flex items-center gap-1 font-bold">
+                                VIEW LIVE <span class="text-[8px]">↗</span>
+                            </a>
                         </div>
                         <p class="text-[10px] text-gray-600 leading-relaxed">
-                            Developed a full-stack job portal with auth & tracking. <br>
-                            <span class="font-bold text-gray-800">Key Achievement:</span> Orchestrated complete production deployment on Linux VPS using Nginx, SSL, and PM2 process management.
+                            Developed a full-stack career portal featuring user authentication and job tracking. <br>
+                            <span class="font-bold text-gray-800">Achievement:</span> Orchestrated the complete production deployment on a Linux VPS. Configured Nginx as a reverse proxy, set up SSL security, and utilized PM2.
                         </p>
                     </div>
 
-                    <div class="bg-gray-50 p-3 rounded border border-gray-100">
-                        <div class="flex justify-between items-center mb-1">
+                    <div class="group">
+                        <div class="flex justify-between items-center mb-0.5">
                             <h3 class="text-xs font-bold text-gray-900 uppercase">Product Verify System</h3>
-                            <a href="https://istad-web-dev-i.vercel.app/" class="text-[10px] font-bold text-blue-700 hover:underline">VIEW LIVE ↗</a>
+                            <a href="https://istad-web-dev-i.vercel.app/" class="text-[10px] text-blue-700 hover:underline flex items-center gap-1 font-bold">
+                                VIEW LIVE <span class="text-[8px]">↗</span>
+                            </a>
                         </div>
                         <p class="text-[10px] text-gray-600 leading-relaxed">
-                            Engineered a secure anti-counterfeit web app. <br>
-                            <span class="font-bold text-gray-800">Key Achievement:</span> Leveraged Next.js for server-side rendering to verify product origins in real-time via QR code scanning.
+                            Engineered a secure web application designed to validate product authenticity. <br>
+                            <span class="font-bold text-gray-800">Achievement:</span> Leveraged Next.js for server-side rendering to verify product origins in real-time via QR code scanning.
                         </p>
                     </div>
                 </div>
