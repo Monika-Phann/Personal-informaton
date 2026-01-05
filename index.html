@@ -23,14 +23,27 @@
         .resume-page {
             width: 210mm;
             min-height: 297mm;
-            height: 297mm; /* Force fixed height for one page */
+            height: 297mm;
             background: white;
             display: flex;
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
             overflow: hidden;
         }
+        /* Custom scrollbar for skills if needed, though we fit to page */
+        ::-webkit-scrollbar { width: 0px; }
+
+        /* Timeline Dot */
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #374151; /* Dark Grey */
+            border-radius: 50%;
+            position: absolute;
+            left: -6.5px;
+            top: 5px;
+            border: 2px solid white;
+        }
         
-        /* Print Settings */
         @media print {
             body { background: white; padding: 0; }
             .resume-page { box-shadow: none; height: 297mm; }
@@ -43,187 +56,181 @@
 
     <div class="fixed top-5 right-5 no-print">
         <button onclick="window.print()" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded shadow-lg flex items-center gap-2 transition-all">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             Save as PDF
         </button>
     </div>
 
     <div class="resume-page">
         
-        <aside class="w-[34%] bg-[#404040] text-white p-8 flex flex-col gap-8 h-full shrink-0">
+        <aside class="w-[33%] bg-[#40444b] text-white p-8 flex flex-col gap-6 h-full shrink-0">
             
-            <div class="flex justify-center -mt-2">
-                <div class="w-36 h-36 rounded-full border-4 border-white overflow-hidden shadow-md">
+            <div class="flex justify-center mb-2">
+                <div class="w-36 h-36 rounded-full border-[4px] border-white overflow-hidden shadow-lg">
                     <img src="./src/profile.jpg" alt="Profile" class="w-full h-full object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/4B5563/FFFFFF?text=PHOTO';">
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/5c5c5c/FFFFFF?text=PHOTO';">
                 </div>
             </div>
 
             <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-wider border-b border-gray-400 pb-2 uppercase">Contact</h3>
-                <div class="space-y-3 text-[12px] font-light tracking-wide text-gray-100">
+                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Contact</h3>
+                <div class="space-y-3 text-[12px] font-light text-gray-100">
                     <div class="flex items-center gap-3">
-                        <span class="text-base">📞</span>
-                        <a href="tel:+85570372794" class="hover:text-white transition-colors">+855 703 727 94</a>
+                        <span class="text-lg">📞</span>
+                        <a href="tel:+85570372794" class="hover:text-gray-300 transition-colors">+855 703 727 94</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="text-base">✉️</span>
-                        <a href="mailto:nika00tgi@gmail.com" class="hover:text-white transition-colors break-all">nika00tgi@gmail.com</a>
+                        <span class="text-lg">✉️</span>
+                        <a href="mailto:nika00tgi@gmail.com" class="hover:text-gray-300 transition-colors break-all">nika00tgi@gmail.com</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="text-base">📍</span>
+                        <span class="text-lg">📍</span>
                         <span>Phnom Penh, Cambodia</span>
                     </div>
                     <div class="flex items-start gap-3">
-                        <span class="text-base mt-0.5">💻</span>
-                        <a href="https://github.com/Monika-Phann" class="hover:text-white transition-colors">github.com/Monika-Phann</a>
+                        <span class="text-lg mt-[-2px]">🐙</span>
+                        <a href="https://github.com/Monika-Phann" class="hover:text-gray-300 transition-colors">Monika-Phann</a>
                     </div>
                 </div>
             </div>
 
             <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-wider border-b border-gray-400 pb-2 uppercase">Skills</h3>
-                <ul class="space-y-3 text-[12px] font-light text-gray-100 list-disc list-outside ml-4 leading-relaxed">
-                    <li>Problem-solving and debugging in JavaScript and back-end technologies.</li>
-                    <li>Team collaboration and project management using Agile strategies.</li>
-                    <li>Time Management & Organization.</li>
-                    <li>Effective Communication.</li>
-                    <li>Git workflows (branching, merging) and code review processes.</li>
+                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Skills</h3>
+                <ul class="space-y-2.5 text-[12px] font-light text-gray-100 list-disc list-outside ml-4">
+                    <li>Problem-solving & Debugging</li>
+                    <li>Team Collaboration (Agile/Scrum)</li>
+                    <li>Time Management & Organization</li>
+                    <li>Git Workflows & Code Review</li>
+                    <li>System Admin (Linux/Nginx)</li>
+                    <li>Effective Communication</li>
                 </ul>
             </div>
 
             <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-wider border-b border-gray-400 pb-2 uppercase">Languages</h3>
-                <ul class="space-y-2 text-[12px] font-light text-gray-100 list-disc list-inside">
-                    <li><span class="font-medium">English:</span> Upper Intermediate</li>
-                    <li><span class="font-medium">Khmer:</span> Native Tongue</li>
-                </ul>
+                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Languages</h3>
+                <div class="space-y-2 text-[12px] font-light text-gray-100">
+                    <div class="flex justify-between">
+                        <span>Khmer</span>
+                        <span class="opacity-75">Native</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>English</span>
+                        <span class="opacity-75">Upper Intermediate</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="space-y-4 pt-2">
-                <h3 class="text-lg font-bold tracking-wider border-b border-gray-400 pb-2 uppercase">Referees</h3>
-                <div class="text-[12px] font-light text-gray-100 space-y-1">
-                    <p class="font-bold text-white text-sm">Thong Soriaphorn</p>
-                    <p>Operations Manager</p>
-                    <p class="italic opacity-80">ANB School</p>
-                    <p class="mt-1">📞 016 520 456</p>
-                    <p class="truncate text-[11px]">✉️ soriaphorn.thong@anbschool.org</p>
-                </div>
+            <div class="mt-auto pt-4 space-y-1">
+                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2 mb-3">Referees</h3>
+                <p class="font-bold text-sm text-white">Thong Soriaphorn</p>
+                <p class="text-[12px] text-gray-300">Operations Manager</p>
+                <p class="text-[12px] text-gray-300">ANB School</p>
+                <p class="text-[12px] text-gray-200 mt-1">📞 016 520 456</p>
+                <p class="text-[11px] text-gray-300 break-all">soriaphorn.thong@anbschool.org</p>
             </div>
         </aside>
 
-        <main class="w-[66%] p-10 flex flex-col h-full text-gray-800">
+        <main class="w-[67%] p-10 flex flex-col h-full text-gray-800">
             
-            <header class="mb-8 mt-2">
-                <h1 class="text-4xl font-black text-gray-800 tracking-wider uppercase mb-1">MONIKA PHANN</h1>
-                <p class="text-lg text-gray-500 tracking-[0.2em] font-medium uppercase">FULL STACK DEVELOPER</p>
+            <header class="mb-6 border-b-2 border-gray-800 pb-6">
+                <h1 class="text-[44px] font-black text-gray-900 tracking-wide uppercase leading-none">MONIKA <span class="font-light">PHANN</span></h1>
+                <p class="text-lg text-gray-600 tracking-[0.3em] font-medium uppercase mt-2">FULL STACK DEVELOPER</p>
             </header>
 
-            <section class="mb-8">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-800 pb-1 mb-3 flex items-center gap-2">
-                    <span class="text-gray-800 text-lg">👤</span> PROFILE
-                </h2>
-                <p class="text-[11px] leading-6 text-justify text-gray-600">
-                    I am a student at <strong class="text-gray-800">Above and Beyond</strong> with a strong focus on <strong class="text-gray-800">Full-Stack Web Development</strong>. I bridge the gap between development and operations, building dynamic applications using <strong class="text-gray-800">React, Node.js, and PostgreSQL</strong>, while personally handling deployment on <strong class="text-gray-800">Linux VPS</strong> environments. I am a proactive problem-solver eager to apply my technical depth as an <strong class="text-gray-800">Intern</strong> or <strong class="text-gray-800">Junior Developer</strong>.
+            <section class="mb-6">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xl text-gray-800">👤</span>
+                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">PROFILE</h2>
+                </div>
+                <p class="text-[11px] leading-relaxed text-justify text-gray-600 font-normal">
+                    I am a student at <strong class="text-gray-900">Above and Beyond</strong> with a strong focus on <strong class="text-gray-900">Full-Stack Web Development</strong> and <strong class="text-gray-900">System Administration</strong>. Unlike typical students who focus only on writing code, I bridge the gap between development and operations. I build dynamic applications using <strong class="text-gray-900">React, Node.js, and PostgreSQL</strong>, and I personally handle their deployment on <strong class="text-gray-900">Linux (Ubuntu) VPS</strong> environments. I am a proactive problem-solver eager to apply my technical depth as an <strong class="text-gray-900">Intern</strong> or <strong class="text-gray-900">Junior Developer</strong>.
                 </p>
             </section>
 
-            <section class="mb-8">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-800 pb-1 mb-3 flex items-center gap-2">
-                    <span class="text-gray-800 text-lg">⚙️</span> TECHNICAL SKILLS
-                </h2>
-                <div class="grid grid-cols-1 gap-2 text-[11px] text-gray-700">
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">Front-End Dev:</span>
-                        <span>HTML, CSS, JavaScript, React.js, Tailwind CSS, Responsive Design.</span>
+            <section class="mb-6">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xl text-gray-800">⚙️</span>
+                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">TECHNICAL SKILLS</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-[11px] text-gray-600">
+                    <div>
+                        <strong class="text-gray-900 block mb-0.5">Front-End</strong>
+                        React.js, Tailwind CSS, HTML5, CSS3, JavaScript (ES6+), Responsive Design.
                     </div>
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">Back-End Dev:</span>
-                        <span>Node.js, Express.js, RESTful APIs, Authentication (JWT).</span>
+                    <div>
+                        <strong class="text-gray-900 block mb-0.5">Back-End</strong>
+                        Node.js, Express.js, RESTful API Architecture, Authentication (JWT/SSO).
                     </div>
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">Database:</span>
-                        <span>PostgreSQL, MongoDB, Query Optimization, Data Modeling.</span>
+                    <div class="mt-1">
+                        <strong class="text-gray-900 block mb-0.5">DevOps & SysAdmin</strong>
+                        Linux (Ubuntu), Nginx (Proxy), PM2, SSH Tunneling, Cloudflare, VPS.
                     </div>
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">DevOps & Admin:</span>
-                        <span>Linux (Ubuntu), Nginx, PM2, SSH Tunneling, Cloudflare DNS.</span>
-                    </div>
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">Version Control:</span>
-                        <span>Git, GitHub (Branching, Merging, Pull Requests).</span>
-                    </div>
-                    <div class="flex">
-                        <span class="font-bold text-gray-900 w-32 shrink-0">Tools/Design:</span>
-                        <span>Postman, VS Code, Figma (UI/UX Prototyping).</span>
+                    <div class="mt-1">
+                        <strong class="text-gray-900 block mb-0.5">Database & Tools</strong>
+                        PostgreSQL, MongoDB, Git, GitHub, Postman, VS Code, Figma.
                     </div>
                 </div>
             </section>
 
-            <section class="mb-8">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-800 pb-1 mb-3 flex items-center gap-2">
-                    <span class="text-gray-800 text-lg">🎓</span> EDUCATIONS
-                </h2>
-                <div class="space-y-4">
-                    <div class="flex gap-4">
-                        <div class="w-24 shrink-0 text-[11px] font-bold text-gray-800 flex items-center gap-2">
-                            <span class="bg-gray-800 rounded-full w-2 h-2 block"></span> 2025
+            <section class="mb-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-xl text-gray-800">🎓</span>
+                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">EDUCATION</h2>
+                </div>
+                
+                <div class="border-l-2 border-gray-300 ml-2 space-y-6">
+                    <div class="relative pl-6">
+                        <div class="timeline-dot"></div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-gray-900 uppercase">Certificate in Backend Engineering</h3>
+                            <span class="text-[10px] font-bold text-gray-500">2025</span>
                         </div>
-                        <div>
-                            <h3 class="text-xs font-bold text-gray-900">Above and Beyond School - <span class="font-medium">Backend Engineering</span></h3>
-                            <p class="text-[10px] text-gray-600 mt-0.5 leading-relaxed">
-                                Completed an intensive 3-month full-time software development program focused on backend architecture. Gained practical experience in corporate-standard development workflows, API design, and system deployment.
-                            </p>
-                        </div>
+                        <p class="text-[10px] italic text-gray-600 mb-1">Above and Beyond School</p>
+                        <p class="text-[10px] text-gray-600 leading-tight">
+                            Completed an intensive 3-month full-time software development program focused on backend architecture. Gained practical experience in corporate-standard development workflows, API design, and system deployment.
+                        </p>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="w-24 shrink-0 text-[11px] font-bold text-gray-800 flex items-center gap-2">
-                            <span class="bg-gray-800 rounded-full w-2 h-2 block"></span> 2024
+
+                    <div class="relative pl-6">
+                        <div class="timeline-dot"></div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-gray-900 uppercase">Bachelor of Information Technology</h3>
+                            <span class="text-[10px] font-bold text-gray-500">2024</span>
                         </div>
-                        <div>
-                            <h3 class="text-xs font-bold text-gray-900">Institute of Science and Technology (ISTAD)</h3>
-                            <p class="text-[10px] text-gray-600 mt-0.5 leading-relaxed">
-                                Bachelor of Information Technology (Year 1). Completed Year 1 fundamental coursework with a specialized focus on Frontend technologies. Temporarily paused degree completion to pursue an intensive, practical software engineering capstone at Above and Beyond.
-                            </p>
-                        </div>
+                        <p class="text-[10px] italic text-gray-600 mb-1">Institute of Science and Technology (ISTAD)</p>
+                        <p class="text-[10px] text-gray-600 leading-tight">
+                            Completed Year 1 fundamental coursework with a specialized focus on Frontend technologies. Temporarily paused degree completion to pursue an intensive, practical software engineering capstone at Above and Beyond.
+                        </p>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest border-b-2 border-gray-800 pb-1 mb-3 flex items-center gap-2">
-                    <span class="text-gray-800 text-lg">💻</span> SCHOOL PROJECT
-                </h2>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-xl text-gray-800">💻</span>
+                    <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest">SCHOOL PROJECT</h2>
+                </div>
                 <div class="space-y-3">
-                    <div class="flex gap-2 items-start">
-                        <span class="text-green-600 mt-0.5 text-xs">●</span>
-                        <div>
-                            <p class="text-[11px] text-gray-800 font-bold inline">CareerSync Platform:</p>
-                            <p class="text-[11px] text-gray-600 inline">
-                                Developed a full-stack career portal featuring user authentication, job posting management, and application tracking.
-                                <strong>Key Achievement:</strong> Orchestrated the complete production deployment on a Linux VPS. Configured Nginx as a reverse proxy, set up SSL security, and utilized PM2 for process management.
-                                <a href="https://careersync-4be.ptascloud.online/" class="text-blue-600 hover:underline ml-1">View Live</a>
-                            </p>
+                    <div class="bg-gray-50 p-3 rounded border border-gray-100">
+                        <div class="flex justify-between items-center mb-1">
+                            <h3 class="text-xs font-bold text-gray-900 uppercase">CareerSync Platform</h3>
+                            <a href="https://careersync-4be.ptascloud.online/" class="text-[10px] font-bold text-blue-700 hover:underline">VIEW LIVE ↗</a>
                         </div>
+                        <p class="text-[10px] text-gray-600 leading-relaxed">
+                            Developed a full-stack job portal with auth & tracking. <br>
+                            <span class="font-bold text-gray-800">Key Achievement:</span> Orchestrated complete production deployment on Linux VPS using Nginx, SSL, and PM2 process management.
+                        </p>
                     </div>
-                    <div class="flex gap-2 items-start">
-                        <span class="text-blue-600 mt-0.5 text-xs">●</span>
-                        <div>
-                            <p class="text-[11px] text-gray-800 font-bold inline">Product Verify System:</p>
-                            <p class="text-[11px] text-gray-600 inline">
-                                Engineered a secure web application designed to validate product authenticity. Leveraged <strong>Next.js</strong> for server-side rendering and high performance, enabling users to verify beverage origins in real-time via QR code scanning.
-                                <a href="https://istad-web-dev-i.vercel.app/" class="text-blue-600 hover:underline ml-1">View Live</a>
-                            </p>
+
+                    <div class="bg-gray-50 p-3 rounded border border-gray-100">
+                        <div class="flex justify-between items-center mb-1">
+                            <h3 class="text-xs font-bold text-gray-900 uppercase">Product Verify System</h3>
+                            <a href="https://istad-web-dev-i.vercel.app/" class="text-[10px] font-bold text-blue-700 hover:underline">VIEW LIVE ↗</a>
                         </div>
-                    </div>
-                    <div class="flex gap-2 items-start">
-                        <span class="text-purple-600 mt-0.5 text-xs">●</span>
-                        <div>
-                            <p class="text-[11px] text-gray-800 font-bold inline">To-Do List App:</p>
-                            <p class="text-[11px] text-gray-600 inline">
-                                Personal project for task management. Implemented CRUD operations and utilized local storage for data persistence, showcasing fundamental JavaScript and DOM manipulation skills.
-                            </p>
-                        </div>
+                        <p class="text-[10px] text-gray-600 leading-relaxed">
+                            Engineered a secure anti-counterfeit web app. <br>
+                            <span class="font-bold text-gray-800">Key Achievement:</span> Leveraged Next.js for server-side rendering to verify product origins in real-time via QR code scanning.
+                        </p>
                     </div>
                 </div>
             </section>
