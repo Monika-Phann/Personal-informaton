@@ -1,258 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONIKA PHANN - Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<main class="w-[66%] p-10 flex flex-col h-full text-gray-800">
     
-    <style>
-        @page {
-            size: A4;
-            margin: 0;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #525659;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 20px;
-        }
-        .resume-page {
-            width: 210mm;
-            min-height: 297mm;
-            height: 297mm;
-            background: white;
-            display: flex;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            overflow: hidden;
-        }
-        
-        /* Typography Polish */
-        h1 { letter-spacing: 1px; }
-        h3 { letter-spacing: 0.5px; }
-        p { line-height: 1.5; }
+    <header class="mb-5 border-b-2 border-gray-800 pb-4">
+        <h1 class="text-5xl font-black text-gray-900 tracking-wide uppercase leading-none mb-1">MONIKA PHANN</h1>
+        <p class="text-lg text-gray-600 tracking-[0.2em] font-medium uppercase">Junior Cloud Products Support Engineer</p>
+    </header>
 
-        /* Timeline Styles */
-        .timeline-container {
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid #374151;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -6.5px;
-            top: 5px;
-            width: 11px;
-            height: 11px;
-            background-color: #374151;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
+    <section class="mb-5">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">PROFILE</h2>
+        <p class="text-[11px] leading-relaxed text-justify text-gray-600">
+            I am a student at <strong class="text-gray-900">Above and Beyond</strong> school with a focus on cloud support and backend engineering. I have foundational knowledge in <strong class="text-gray-900">Virtualization (Oracle VirtualBox)</strong> and <strong class="text-gray-900">Cloud Infrastructure (AWS)</strong>. I have practiced moving applications from PM2 to Docker and setting up CI/CD pipelines. I am a proactive problem-solver eager to apply my skills as an <strong class="text-gray-900">Intern</strong> or <strong class="text-gray-900">Junior Engineer</strong> at DPDC.
+        </p>
+    </section>
 
-        @media print {
-            body { background: white; padding: 0; }
-            .resume-page { box-shadow: none; height: 297mm; }
-            .no-print { display: none !important; }
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        }
-    </style>
-</head>
-<body>
+    <section class="mb-5">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2 border-b border-gray-300 pb-1">TECHNICAL SKILLS</h2>
+        <ul class="text-[11px] text-gray-700 space-y-1">
+             <li><strong class="text-gray-900 uppercase tracking-wide mr-1">Cloud & Infra:</strong> AWS (EC2, VPC, SG) | Docker & Compose | Cloudflare R2 | Cloudflared Tunnels</li>
+             <li><strong class="text-gray-900 uppercase tracking-wide mr-1">Systems & Security:</strong> Linux (Ubuntu) | POSIX Permissions | Nginx Proxy | SSH Key-Pair</li>
+             <li><strong class="text-gray-900 uppercase tracking-wide mr-1">DevOps:</strong> GitHub Actions CI/CD | GitHub Secrets | Bash Scripts | Basic ITIL Monitoring</li>
+             <li><strong class="text-gray-900 uppercase tracking-wide mr-1">Development:</strong> JavaScript/TypeScript | React.js | Node.js | Express.js | PostgreSQL</li>
+             <li><strong class="text-gray-900 uppercase tracking-wide mr-1">Methodology:</strong> Agile & Scrum | Sprint Planning | Daily Stand-ups | Team Collaboration</li>
+        </ul>
+    </section>
 
-    <div class="fixed top-5 right-5 no-print">
-        <button onclick="window.print()" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded shadow-lg flex items-center gap-2 transition-all">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-            Save as PDF
-        </button>
-    </div>
-
-    <div class="resume-page">
-        
-        <aside class="w-[34%] bg-[#3b3e45] text-white p-8 flex flex-col gap-8 shrink-0">
-            
-            <div class="flex justify-center">
-                <div class="w-36 h-36 rounded-full border-[4px] border-white overflow-hidden shadow-lg">
-                    <img src="./src/profile.jpg" alt="Profile" class="w-full h-full object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/5c5c5c/FFFFFF?text=PHOTO';">
+    <section class="mb-5">
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-3 border-b border-gray-300 pb-1">EDUCATION</h2>
+        <div class="space-y-4">
+            <div class="timeline-container">
+                <div class="timeline-dot"></div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-xs font-bold text-gray-900 uppercase">Certificate in Backend Engineering</h3>
+                    <span class="text-[10px] font-bold text-gray-500">2026</span>
                 </div>
-            </div>
-
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Contact</h3>
-                <div class="space-y-3 text-[12px] font-light text-gray-200">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a1 1 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.088-1.391l-4.064-3.696z"/></svg>
-                        <a href="tel:+85570372794" class="hover:text-white transition-colors">+855 703 727 94</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"/></svg>
-                        <a href="mailto:nika00tgi@gmail.com" class="hover:text-white transition-colors break-all">nika00tgi@gmail.com</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
-                        <span>Phnom Penh, Cambodia</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                        <a href="https://github.com/Monika-Phann" class="hover:text-white transition-colors">Monika-Phann</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Skills</h3>
-                <ul class="space-y-2.5 text-[12px] font-light text-gray-200 list-disc list-outside ml-4">
-                    <li>Problem-solving & Hard Working</li>
-                    <li>Agile & Scrum Methodologies</li>
-                    <li>Time Management & Organization</li>
-                    <li>Effective Communication</li>
-                    <li>Project Management and & Team Collaboration</li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Languages</h3>
-                <div class="space-y-2 text-[12px] font-light text-gray-200">
-                    <div class="flex justify-between">
-                        <span>Khmer</span>
-                        <span class="text-gray-400">Native</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>English</span>
-                        <span class="text-gray-400">Upper Intermediate</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h3 class="text-lg font-bold tracking-widest uppercase border-b border-gray-500 pb-2">Referees</h3>
-                <div class="text-[12px] text-gray-300 space-y-0.5">
-                    <p class="font-bold text-white text-sm mb-1">Thong Soriaphorn</p>
-                    <p>Operations Manager</p>
-                    <p class="italic text-gray-400">ANB School</p>
-                    <p class="mt-1">📞 016 520 456</p>
-                    <p class="break-all text-[11px]">✉️ soriaphorn.thong@anbschool.org</p>
-                </div>
-            </div>
-        </aside>
-
-        <main class="w-[66%] p-10 flex flex-col h-full text-gray-800">
-            
-            <header class="mb-6 border-b-2 border-gray-800 pb-6">
-                <h1 class="text-5xl font-black text-gray-900 tracking-wide uppercase leading-none mb-2">MONIKA PHANN</h1>
-                <p class="text-lg text-gray-600 tracking-[0.2em] font-medium uppercase">FULL STACK DEVELOPER</p>
-            </header>
-
-            <section class="mb-7">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-3">PROFILE</h2>
-                <p class="text-[11px] leading-relaxed text-justify text-gray-600">
-                    I am a student at <strong class="text-gray-900">Above and Beyond</strong> with a strong focus on <strong class="text-gray-900">CLOUD PRODUCTS SUPPORT ENGINEER (Full-Stack Background)</strong> Highly motivated Engineer with a strong foundation in Virtualization (Oracle VirtualBox) and Cloud Infrastructure (AWS). Expert in migrating legacy PM2 processes to Dockerized environments. Proven track record in automating CI/CD pipelines and resolving complex Tier 2 networking issues. Dedicated to maintaining high standards of system reliability and proactive incident response in fast-paced cloud environments.  I am a proactive problem-solver eager to apply my technical depth as an <strong class="text-gray-900">Intern</strong> or <strong class="text-gray-900">Junior Developer</strong>.
+                <p class="text-[10px] italic text-gray-600 mb-1">Above and Beyond School</p>
+                <p class="text-[10px] text-gray-600 leading-relaxed">
+                    Completed an intensive 3-month full-time program focused on <strong class="text-gray-900">Backend architecture & DevOps</strong>. Gained practical experience in corporate-standard development workflows, API design, and system deployment.
                 </p>
-            </section>
+            </div>
 
-            <section class="mb-7">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-3 border-b border-gray-300 pb-1">TECHNICAL SKILLS</h2>
-                <ul class="text-[11px] text-gray-700 space-y-2">
-                     <li>
-                        <strong class="text-gray-900 uppercase tracking-wide mr-2">Cloud & Infrastructure (Priority)</strong>
-                         AWS (IaaS): EC2 Instance Lifecycle, Security Group (Firewall) Ingress/Egress rules, VPC networking, Public/Private IP management. <br>
-
-                         Containerization: Docker & Docker Compose, Image Building (Dockerfiles), Container Networking, Volume Mounting, Resource Limits.  <br>
-
-                         Object Storage: Cloudflare R2 (S3-compatible API), Bucket Management, CORS configurations, Public/Private access control.  <br>
-
-                         Edge Networking: Cloudflared (Argo Tunnels) for secure origin-to-edge connectivity, DNS Record Management (CNAME/A records), SSL/TLS Flexible vs. Full encryption.<li>
-                        <strong class="text-gray-900 uppercase tracking-wide mr-2">Systems Administration & Security</strong>
-                         Linux (Ubuntu): Terminal proficiency (Bash), Package Management (APT), User Group Management (usermod, newgrp). <br>
-
-                         Security Hardening: POSIX Permissions (chmod 700/600), SSH Key-Pair generation, authorized_keys management, Disabling Password Auth. <br>
-
-                         Process Management: PM2 (Cluster mode, Log management, Startup scripts), Systemd Service units. <br>
-
-                         Reverse Proxy: Nginx server blocks, Proxy passing, Load balancing basics, Header manipulation.                    </li>
-                    <li>
-                        <strong class="text-gray-900 uppercase tracking-wide mr-2">DevOps & Automation</strong>
-                         CI/CD Pipelines: GitHub Actions (Workflow YAML, Action Runners), GitHub Secrets management for secure environment variables. <br>
-
-                         Scripting: Bash Scripting for automated deployments (deploy.sh), Git Workflows (Branching, Merging, Git-flow). <br>
-
-                         Monitoring (ITIL): Proactive Docker Health Checks (Intervals, Timeouts, Retries), Self-healing auto-restart policies.                    </li>
-                    <li>
-                        <strong class="text-gray-900 uppercase tracking-wide mr-2">Full-Stack Development</strong>
-                         Languages: JavaScript (ES6+), TypeScript. <br>
-
-                         Frameworks: React.js, Node.js, Express.js. <br>
-
-                         Databases: PostgreSQL (Relational), Query Optimization.                    </li>
-                    <li>
-                        <strong class="text-gray-900 uppercase tracking-wide mr-2">Methodology & Collaboration</strong>
-                         Agile/Scrum: Sprint Planning, Daily Stand-ups, Kanban board management, Iterative development. <br>
-
-                         ITIL v4: Incident Management (restoring service), Event Management (monitoring), Change Enablement (deploying new code).                    </li>
-                             
-                </ul>
-            </section>
-
-            <section class="mb-7">
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 border-b border-gray-300 pb-1">EDUCATIONS</h2>
-                
-                <div class="space-y-5">
-                    <div class="timeline-container">
-                        <div class="timeline-dot"></div>
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h3 class="text-xs font-bold text-gray-900 uppercase">Certificate in Backend Engineering</h3>
-                            <span class="text-[10px] font-bold text-gray-500">2026</span>
-                        </div>
-                        <p class="text-[10px] italic text-gray-600 mb-1">Above and Beyond School</p>
-                        <p class="text-[10px] text-gray-600 leading-relaxed">
-                            Completed an intensive 3-month full-time software development program focused on <strong class="text-gray-900">Backend architecture & DevOPs</strong>. Gained practical experience in corporate-standard development workflows, API design, and system deployment.
-                        </p>
-                    </div>
-
-                    <div class="timeline-container">
-                        <div class="timeline-dot"></div>
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h3 class="text-xs font-bold text-gray-900 uppercase">Bachelor of Information Technology</h3>
-                            <span class="text-[10px] font-bold text-gray-500">2025</span>
-                        </div>
-                        <p class="text-[10px] italic text-gray-600 mb-1">Institute of Science and Technology (ISTAD)</p>
-                        <p class="text-[10px] text-gray-600 leading-relaxed">
-                            Completed Year 1 fundamental coursework with a specialized focus on <strong class="text-gray-900">Frontend technologies</strong>. Temporarily paused degree completion to pursue an intensive, practical software engineering capstone at Above and Beyond.
-                        </p>
-                    </div>
+            <div class="timeline-container">
+                <div class="timeline-dot"></div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-xs font-bold text-gray-900 uppercase">Bachelor of Information Technology</h3>
+                    <span class="text-[10px] font-bold text-gray-500">2025</span>
                 </div>
-            </section>
+                <p class="text-[10px] italic text-gray-600 mb-1">Institute of Science and Technology (ISTAD)</p>
+                <p class="text-[10px] text-gray-600 leading-relaxed">
+                    Completed Year 1 fundamental coursework with a specialized focus on <strong class="text-gray-900">Frontend technologies</strong>. Temporarily paused degree completion to pursue an intensive, practical software engineering capstone at Above and Beyond.
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <section>
-                <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-3 border-b border-gray-300 pb-1">SCHOOL PROJECT</h2>
-                <div class="space-y-3">
-                    <div>
-                        <div class="flex justify-between items-center mb-0.5">
-                            <h3 class="text-xs font-bold text-gray-900 uppercase">CareerSync Platform</h3>
-                            <a href="https://careersync-4be.ptascloud.online/" class="text-[10px] text-blue-700 hover:underline font-bold">VIEW LIVE ↗</a>
-                        </div>
-                        <p class="text-[10px] text-gray-600 leading-relaxed">
-                            <span class="text-gray-900 font-semibold">Description:</span> Orchestrated a secure, containerized cloud migration on AWS, transitioning a Full-Stack app from manual processes to an automated DevOps environment.<br>
-                            <span class="text-gray-900 font-semibold">Key Achievement:</span> Orchestration: Migrated PM2 to Docker Compose for scalability and environment parity. <br>
+    <section>
+        <h2 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2 border-b border-gray-300 pb-1">PROJECTS</h2>
+        <div>
+            <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xs font-bold text-gray-900 uppercase">CareerSync Platform</h3>
+                <a href="https://careersync-4be.ptascloud.online/" class="text-[10px] text-blue-700 hover:underline font-bold italic">LIVE ↗</a>
+            </div>
+            <p class="text-[10px] text-gray-600 leading-relaxed mb-2">Developed and deployed a cloud-based application, moving from local testing to a live server environment.</p>
+            <ul class="text-[10px] text-gray-600 list-disc ml-4 space-y-0.5">
+                <li>Migrated app from PM2 to Docker Compose for better management.</li>
+                <li>Used Cloudflared Tunnels and POSIX rules to help secure the server.</li>
+                <li>Set up Cloudflare R2 for storing application images and files.</li>
+                <li>Created GitHub Actions to automate code updates to the server.</li>
+                <li>Practiced testing configurations in Oracle VirtualBox before cloud use.</li>
+                <li>Added basic health checks to help the system restart if it crashes.</li>
+            </ul>
+        </div>
+    </section>
 
-                             Security: Hardened access via Cloudflared Tunnels and POSIX (600/700) standards. <br>
-
-                             Storage: Integrated Cloudflare R2 (S3-compatible) for optimized asset management. <br>
-
-                             Automation: Built GitHub Actions CI/CD for secure, zero-downtime deployments. <br>
-
-                             Virtualization: Validated configs using Oracle VirtualBox with local Ubuntu VMs. <br>
-
-                             Reliability: Applied ITIL health checks and auto-restart policies for self-healing.
-                    </div>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-</body>
-</html>
+</main>
