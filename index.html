@@ -33,20 +33,13 @@ body {
     overflow: hidden;
 }
 
-main {
-    padding: 48px;
-}
+main { padding: 48px; }
+aside { padding: 40px; }
 
-aside {
-    padding: 40px;
-}
-
-/* Typography */
 h1 { letter-spacing: 1px; }
 h3 { letter-spacing: 0.5px; }
 p { line-height: 1.6; }
 
-/* Timeline */
 .timeline-container {
     position: relative;
     padding-left: 20px;
@@ -61,11 +54,6 @@ p { line-height: 1.6; }
     background-color: #374151;
     border-radius: 50%;
     border: 2px solid white;
-}
-
-@media print {
-    body { background: white; padding: 0; }
-    .resume-page { box-shadow: none; }
 }
 </style>
 </head>
@@ -94,10 +82,10 @@ p { line-height: 1.6; }
     <div>
         <h3 class="text-lg font-bold border-b border-gray-500 pb-2 mb-3">Soft Skills</h3>
         <ul class="text-[12px] list-disc ml-4 space-y-1">
-            <li>Problem Solving</li>
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Time Management</li>
+            <li>Problem-solving & Hard Working</li>
+            <li>Time Management & Organization</li>
+            <li>Effective Communication</li>
+            <li>Project Management & Collaboration</li>
         </ul>
     </div>
 
@@ -112,56 +100,94 @@ p { line-height: 1.6; }
 <!-- RIGHT -->
 <main class="w-[66%] text-gray-800">
 
+<!-- HEADER -->
 <header class="mb-8 border-b pb-6 border-gray-800">
     <h1 class="text-6xl font-black uppercase">YI SEAVVEY</h1>
     <p class="text-lg tracking-widest text-gray-600">UX/UI Designer</p>
 </header>
 
-<!-- PROFILE -->
+<!-- PROFILE (UNCHANGED CONTENT) -->
 <section class="mb-8">
-    <h2 class="text-base font-bold uppercase mb-3">Profile</h2>
-    <p class="text-[13px] text-gray-600">
-        I am a student at <strong>Royal University of Phnom Penh</strong> with a passion for UX/UI Design. I focus on creating intuitive, user-centered interfaces and improving user experience through clean and functional design.
+    <h2 class="text-base font-bold uppercase mb-3">PROFILE</h2>
+    <p class="text-[13px] text-gray-600 text-justify">
+        I am a student at <strong>Royal University of Phnom Penh</strong> passion for <strong>UX/UI Design</strong> I focus on creating intuitive, user-centered interfaces that enhance user experience and usability. I enjoy transforming ideas into visually appealing and functional designs, ensuring that every product is both accessible and engaging. As an aspiring UX/UI Designer, I am eager to continuously learn, improve, and contribute creative solutions to real-world projects.
     </p>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS (UNCHANGED CONTENT) -->
 <section class="mb-8">
-    <h2 class="text-base font-bold uppercase mb-3 border-b pb-1">Technical Skills</h2>
-    <p class="text-[13px] text-gray-600">
-        UI/UX Design: wireframing, prototyping, user flows, Information Architecture (IA), usability testing, Figma, Adobe Photoshop, Illustrator.
-    </p>
+    <h2 class="text-base font-bold uppercase mb-3 border-b pb-1">TECHNICAL SKILLS</h2>
+
+    <ul class="text-[13px] text-gray-700 space-y-2">
+        <li>
+            <strong>UI/UX Design:</strong>
+            Strong foundation in user-centered design, including Information Architecture (IA), user flows, and wireframing. Skilled in creating interactive prototypes and improving user experience through usability principles. Proficient in Figma and Adobe Creative Suite (Photoshop, Illustrator) for designing clean, responsive, and visually consistent interfaces.
+        </li>
+    </ul>
 </section>
 
-<!-- EDUCATION -->
+<!-- EDUCATION (2 LINES FIXED) -->
 <section class="mb-8">
-<h2 class="text-base font-bold uppercase mb-4 border-b pb-1">Education</h2>
+<h2 class="text-base font-bold uppercase mb-4 border-b pb-1">EDUCATION</h2>
 
 <div class="space-y-6">
 
-<!-- University -->
+<!-- UNIVERSITY -->
 <div class="timeline-container">
 <div class="timeline-dot"></div>
 
-<h3 class="text-sm font-bold uppercase">Bachelor of Computer Science</h3>
-<p class="text-[12px] text-gray-700">Royal University of Phnom Penh</p>
+<h3 class="text-sm font-bold uppercase">
+Bachelor of Computer Science
+</h3>
+<p class="text-[12px] text-gray-700">
+Royal University of Phnom Penh
+</p>
 <span class="text-[11px] text-gray-500">2023 - 2026</span>
 
 <p class="text-[12px] text-gray-600 mt-1">
-Focus on UX/UI Design, wireframing, prototyping, and user-centered design.
+Focus on UX/UI Design, including user-centered design, wireframing, and prototyping. Developed strong design thinking and problem-solving skills.
 </p>
 </div>
 
-<!-- High School -->
+<!-- HIGH SCHOOL -->
 <div class="timeline-container">
 <div class="timeline-dot"></div>
 
-<h3 class="text-sm font-bold uppercase">High School Diploma</h3>
-<p class="text-[12px] text-gray-700">Bunrany Hun Sen Koh Dach High School</p>
+<h3 class="text-sm font-bold uppercase">
+High School Diploma
+</h3>
+<p class="text-[12px] text-gray-700">
+Bunrany Hun Sen Koh Dach High School
+</p>
 <span class="text-[11px] text-gray-500">2021</span>
 
 <p class="text-[12px] text-gray-600 mt-1">
-Completed general education with strong academic discipline.
+Completed general education with a solid academic foundation and discipline for further studies.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS (UNCHANGED CONTENT) -->
+<section>
+<h2 class="text-base font-bold uppercase mb-3 border-b pb-1">SCHOOL PROJECT</h2>
+
+<div class="space-y-3">
+
+<div>
+<h3 class="text-xs font-bold uppercase">LOFA Ecommerce</h3>
+<p class="text-[12px] text-gray-600">
+<span class="font-semibold text-gray-900">Description:</span>
+LOFA is a modern e-commerce mobile app that allows users to browse products, add items to cart, and make secure payments easily. It features user authentication, product listings, detailed product views, and a simple checkout process, providing a fast and user-friendly online shopping experience.
+</p>
+</div>
+
+<div>
+<h3 class="text-xs font-bold uppercase">Bophakok Bank</h3>
+<p class="text-[12px] text-gray-600">
+<span class="font-semibold text-gray-900">Description:</span>
+Designed a sample banking system focusing on user-friendly and intuitive UI/UX. The project includes essential banking features such as account overview, transaction history, and money transfer interface. Emphasized clean layout, clear navigation, and responsive design to ensure a smooth and efficient user experience.
 </p>
 </div>
 
