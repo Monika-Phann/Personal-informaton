@@ -18,9 +18,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #525659;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
 }
 
 .resume-page {
@@ -55,15 +56,38 @@ p { line-height: 1.6; }
     border: 2px solid white;
 }
 
+/* Print Specific Styles */
 @media print {
-    body { background: none; }
-    .resume-page { box-shadow: none; }
-    aside { -webkit-print-color-adjust: exact; background-color: #3b3e45 !important; }
+    body { background: none; padding: 0; }
+    .no-print { display: none !important; }
+    .resume-page { box-shadow: none; margin: 0; }
+    aside { -webkit-print-color-adjust: exact; background-color: #3b3e45 !important; color-adjust: exact; }
 }
+
+/* Floating Print Button Styling */
+.print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    z-index: 1000;
+}
+.print-btn:hover { background-color: #2563eb; }
 </style>
 </head>
 
 <body>
+
+<button class="print-btn no-print" onclick="window.print()">
+    🖨️ Print to PDF
+</button>
 
 <div class="resume-page">
 
@@ -135,7 +159,7 @@ p { line-height: 1.6; }
         <div class="timeline-dot"></div>
         <h3 class="text-[15px] font-bold uppercase text-gray-900">Bachelor of Computer Science</h3>
         <p class="text-[13px] font-medium text-gray-700">Royal University of Phnom Penh | 2023 - 2026</p>
-        <p class="text-[13px] text-gray-600 mt-1">Focus on UX/UI Design, including user-centered design, wireframing, and prototyping. Developed strong design thinking skills.</p>
+        <p class="text-[13px] text-gray-600 mt-1 italic">Focus on UX/UI Design, wireframing, and prototyping.</p>
     </div>
 
     <div class="timeline-container">
@@ -153,14 +177,14 @@ p { line-height: 1.6; }
     <div>
         <h3 class="text-[14px] font-bold uppercase text-gray-900">LOFA Ecommerce</h3>
         <p class="text-[13px] text-gray-600 leading-relaxed mt-1">
-            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> LOFA is a modern e-commerce mobile app that allows users to browse products, add items to cart, and make secure payments easily. It features user authentication, product listings, and a simple checkout process, providing a fast and user-friendly online shopping experience.
+            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> LOFA is a modern e-commerce mobile app that allows users to browse products, add items to cart, and make secure payments easily. It features user authentication, product listings, and a simple checkout process.
         </p>
     </div>
 
     <div>
         <h3 class="text-[14px] font-bold uppercase text-gray-900">Bophakok Bank</h3>
         <p class="text-[13px] text-gray-600 leading-relaxed mt-1">
-            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> Designed a sample banking system focusing on user-friendly and intuitive UI/UX. The project includes essential banking features such as account overview, transaction history, and money transfer interface. Emphasized clean layout and responsive design.
+            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> Designed a sample banking system focusing on user-friendly and intuitive UI/UX. Includes essential banking features such as account overview and transaction history with a responsive design.
         </p>
     </div>
 </div>
