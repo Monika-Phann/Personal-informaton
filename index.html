@@ -32,16 +32,16 @@ body {
     overflow: hidden;
 }
 
-main { padding: 40px 45px; }
-aside { padding: 35px 25px; }
+main { padding: 45px 50px; }
+aside { padding: 50px 30px; }
 
 h1 { letter-spacing: 1px; line-height: 1.1; }
-h2 { border-bottom: 1.5px solid #374151; padding-bottom: 4px; margin-bottom: 12px; }
-p { line-height: 1.5; }
+h2 { border-bottom: 2px solid #374151; padding-bottom: 6px; margin-bottom: 14px; }
+p { line-height: 1.6; }
 
 .timeline-container {
     position: relative;
-    padding-left: 20px;
+    padding-left: 22px;
     border-left: 2px solid #374151;
 }
 .timeline-dot {
@@ -67,101 +67,102 @@ p { line-height: 1.5; }
 
 <div class="resume-page">
 
-<aside class="w-[30%] bg-[#3b3e45] text-white flex flex-col gap-8">
+<aside class="w-[32%] bg-[#3b3e45] text-white flex flex-col justify-between">
 
-    <div class="flex justify-center">
-        <div class="w-28 h-28 rounded-full border-[3px] border-white overflow-hidden shadow-lg">
-            <img src="./src/profile.png" class="w-full h-full object-cover"
-            onerror="this.src='https://placehold.co/200x200/5c5c5c/FFFFFF?text=PHOTO';">
-        </div>
-    </div>
-
-    <div class="space-y-4">
-        <div>
-            <h3 class="text-md font-bold text-gray-300 uppercase tracking-wider mb-2">Contact</h3>
-            <div class="space-y-1 text-[11px]">
-                <p>+855 718 667 857</p>
-                <p class="break-words">yiseavvey.kh@gmail.com</p>
-                <p>Phnom Penh, Cambodia</p>
+    <div class="flex flex-col gap-10">
+        <div class="flex justify-center">
+            <div class="w-32 h-32 rounded-full border-[4px] border-white overflow-hidden shadow-xl">
+                <img src="./src/profile.png" class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/200x200/5c5c5c/FFFFFF?text=PHOTO';">
             </div>
         </div>
 
         <div>
-            <h3 class="text-md font-bold text-gray-300 uppercase tracking-wider mb-2">Soft Skills</h3>
-            <ul class="text-[11px] list-disc ml-4 space-y-1.5">
+            <h3 class="text-lg font-bold text-gray-200 uppercase tracking-widest border-b border-gray-600 pb-2 mb-4">Contact</h3>
+            <div class="space-y-3 text-[13px] text-gray-300">
+                <p class="flex items-center gap-2"><span>📞</span> +855 718 667 857</p>
+                <p class="flex items-center gap-2 truncate"><span>✉️</span> yiseavvey.kh@gmail.com</p>
+                <p class="flex items-center gap-2"><span>📍</span> Phnom Penh, Cambodia</p>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-lg font-bold text-gray-200 uppercase tracking-widest border-b border-gray-600 pb-2 mb-4">Soft Skills</h3>
+            <ul class="text-[13px] text-gray-300 list-disc ml-5 space-y-2">
                 <li>Problem-solving & Hard Working</li>
                 <li>Time Management</li>
                 <li>Effective Communication</li>
                 <li>Project Management</li>
+                <li>Collaboration</li>
             </ul>
         </div>
+    </div>
 
-        <div>
-            <h3 class="text-md font-bold text-gray-300 uppercase tracking-wider mb-2">Languages</h3>
-            <div class="text-[11px] space-y-1">
-                <p><span class="font-bold">Khmer:</span> Native</p>
-                <p><span class="font-bold">English:</span> Intermediate</p>
-            </div>
+    <div class="pb-6">
+        <h3 class="text-lg font-bold text-gray-200 uppercase tracking-widest border-b border-gray-600 pb-2 mb-4">Languages</h3>
+        <div class="text-[13px] text-gray-300 space-y-2">
+            <p><span class="font-bold text-white">Khmer:</span> Native</p>
+            <p><span class="font-bold text-white">English:</span> Intermediate</p>
         </div>
     </div>
 
 </aside>
 
-<main class="w-[70%] text-gray-800">
+<main class="w-[68%] text-gray-800">
 
-<header class="mb-8">
-    <h1 class="text-5xl font-black uppercase text-gray-900">YI SEAVVEY</h1>
-    <p class="text-lg tracking-[0.2em] text-gray-500 font-medium mt-2">UX/UI Designer</p>
+<header class="mb-10">
+    <h1 class="text-6xl font-black uppercase text-gray-900">YI SEAVVEY</h1>
+    <p class="text-xl tracking-[0.25em] text-gray-500 font-medium mt-2">UX/UI Designer</p>
 </header>
 
-<section class="mb-8">
-    <h2 class="text-sm font-black uppercase text-gray-900">PROFILE</h2>
-    <p class="text-[12px] text-gray-600 text-justify">
+<section class="mb-10">
+    <h2 class="text-base font-black uppercase text-gray-900">PROFILE</h2>
+    <p class="text-[14px] text-gray-600 text-justify leading-relaxed">
         I am a student at <strong>Royal University of Phnom Penh</strong> with a passion for <strong>UX/UI Design</strong>. I focus on creating intuitive, user-centered interfaces that enhance user experience and usability. I enjoy transforming ideas into visually appealing and functional designs, ensuring that every product is both accessible and engaging. As an aspiring UX/UI Designer, I am eager to continuously learn, improve, and contribute creative solutions to real-world projects.
     </p>
 </section>
 
-<section class="mb-8">
-    <h2 class="text-sm font-black uppercase text-gray-900">TECHNICAL SKILLS</h2>
-    <div class="text-[12px] text-gray-600">
+<section class="mb-10">
+    <h2 class="text-base font-black uppercase text-gray-900">TECHNICAL SKILLS</h2>
+    <div class="text-[14px] text-gray-600 leading-relaxed">
         <p><strong>UI/UX Design:</strong> Strong foundation in user-centered design, including Information Architecture (IA), user flows, and wireframing. Skilled in creating interactive prototypes and improving usability. Proficient in <strong>Figma</strong> and <strong>Adobe Creative Suite</strong> (Photoshop, Illustrator) for designing clean, responsive interfaces.</p>
     </div>
 </section>
 
-<section class="mb-8">
-<h2 class="text-sm font-black uppercase text-gray-900">EDUCATION</h2>
+<section class="mb-10">
+<h2 class="text-base font-black uppercase text-gray-900">EDUCATION</h2>
 
-<div class="space-y-5">
+<div class="space-y-6">
     <div class="timeline-container">
         <div class="timeline-dot"></div>
-        <h3 class="text-[13px] font-bold uppercase text-gray-900">Bachelor of Computer Science</h3>
-        <p class="text-[11px] font-medium text-gray-700">Royal University of Phnom Penh | 2023 - 2026</p>
-        <p class="text-[11px] text-gray-600 mt-1 italic">Focus on UX/UI Design, wireframing, and prototyping.</p>
+        <h3 class="text-[15px] font-bold uppercase text-gray-900">Bachelor of Computer Science</h3>
+        <p class="text-[13px] font-medium text-gray-700">Royal University of Phnom Penh | 2023 - 2026</p>
+        <p class="text-[13px] text-gray-600 mt-1">Focus on UX/UI Design, including user-centered design, wireframing, and prototyping. Developed strong design thinking skills.</p>
     </div>
 
     <div class="timeline-container">
         <div class="timeline-dot"></div>
-        <h3 class="text-[13px] font-bold uppercase text-gray-900">High School Diploma</h3>
-        <p class="text-[11px] font-medium text-gray-700">Bunrany Hun Sen Koh Dach High School | 2021</p>
+        <h3 class="text-[15px] font-bold uppercase text-gray-900">High School Diploma</h3>
+        <p class="text-[13px] font-medium text-gray-700">Bunrany Hun Sen Koh Dach High School | 2021</p>
     </div>
 </div>
 </section>
 
 <section>
-<h2 class="text-sm font-black uppercase text-gray-900">SCHOOL PROJECTS</h2>
+<h2 class="text-base font-black uppercase text-gray-900">SCHOOL PROJECTS</h2>
 
-<div class="space-y-4">
+<div class="space-y-5">
     <div>
-        <h3 class="text-[12px] font-bold uppercase text-gray-900">LOFA Ecommerce</h3>
-        <p class="text-[11px] text-gray-600 leading-relaxed">
-            <span class="font-bold text-gray-700">Description:</span> LOFA is a modern e-commerce mobile app that allows users to browse products, add items to cart, and make secure payments easily. It features user authentication, product listings, detailed product views, and a simple checkout process, providing a fast and user-friendly online shopping experience.
+        <h3 class="text-[14px] font-bold uppercase text-gray-900">LOFA Ecommerce</h3>
+        <p class="text-[13px] text-gray-600 leading-relaxed mt-1">
+            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> LOFA is a modern e-commerce mobile app that allows users to browse products, add items to cart, and make secure payments easily. It features user authentication, product listings, and a simple checkout process, providing a fast and user-friendly online shopping experience.
         </p>
     </div>
 
     <div>
-        <h3 class="text-[12px] font-bold uppercase text-gray-900">Bophakok Bank</h3>
-        <p class="text-[11px] text-gray-600 leading-relaxed">
-            <span class="font-bold text-gray-700">Description:</span> Designed a sample banking system focusing on user-friendly and intuitive UI/UX. The project includes essential banking features such as account overview, transaction history, and money transfer interface. Emphasized clean layout, clear navigation, and responsive design.
+        <h3 class="text-[14px] font-bold uppercase text-gray-900">Bophakok Bank</h3>
+        <p class="text-[13px] text-gray-600 leading-relaxed mt-1">
+            <span class="font-bold text-gray-700 text-[12px]">DESCRIPTION:</span> Designed a sample banking system focusing on user-friendly and intuitive UI/UX. The project includes essential banking features such as account overview, transaction history, and money transfer interface. Emphasized clean layout and responsive design.
         </p>
     </div>
 </div>
